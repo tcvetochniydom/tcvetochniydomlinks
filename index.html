@@ -22,11 +22,21 @@
             body {
                 background-image: url('fon_site_(final_mob).jpg'); /* Фон для мобильных устройств */
             }
+
+            a {
+                height: 550px; /* Высота кнопок для мобильных устройств */
+                font-size: 16px; /* Размер шрифта для мобильных устройств */
+            }
         }
 
         @media (min-width: 769px) {
             body {
                 background-image: url('fon_site_(final_desk).jpg'); /* Фон для десктопов */
+            }
+
+            a {
+                height: 420px; /* Высота кнопок для десктопов */
+                font-size: 18px; /* Размер шрифта для десктопов */
             }
         }
 
@@ -34,25 +44,27 @@
             color: rgb(122, 21, 125); 
             margin-bottom: 18px;
         }
+        
         a {
             text-decoration: none;
             color: #ffffff;
             background-color: rgba(122, 21, 125, 0.8); 
-            padding: 12px 24px;
             border-radius: 5px;
-            font-size: 18px;
             transition: background-color 0.3s;
-            display: block; 
+            display: flex; /* Используем flex для центрирования текста внутри кнопки */
+            align-items: center; /* Вертикальное центрирование */
+            justify-content: center; /* Горизонтальное центрирование */
             margin: 10px 0; 
-            max-width: 300px; /* Ограничиваем максимальную ширину ссылок */
-            width: 100%; /* Делаем ссылки адаптивными */
+            max-width: 300px;
+            width: 100%; /* Делаем кнопки адаптивными */
         }
+
         a:hover {
             background-color: rgba(122, 21, 125, 1); 
         }
+
         .container {
             text-align: center;
-            margin-bottom: 50px; 
         }
     </style>
 </head>
