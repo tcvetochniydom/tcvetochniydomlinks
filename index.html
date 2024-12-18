@@ -12,8 +12,11 @@
             --button-height-desktop: 50px; /* Высота кнопок для десктопов */
             --top-margin-mobile: 240px; /* Отступ сверху для мобильных */
             --top-margin-desktop: 650px; /* Отступ сверху для десктопов */
-            --button-red: #FF0000; /* Красный цвет */
-            --button-white: #FFFFFF; /* Белый цвет */
+            --yandex-red: #FF3D00; /* Красный цвет Яндекса */
+            --yandex-white: #FFFFFF; /* Белый цвет */
+            --yandex-black: #000000; /* Черный цвет */
+            --whatsapp-green: #25D366; /* Зеленый цвет WhatsApp */
+            --vk-blue: #4B88E5; /* Синий цвет VK */
         }
 
         body {
@@ -75,24 +78,45 @@
             color: #ffffff; /* Исходный цвет текста для других кнопок */
             background-color: rgba(122, 21, 125, 0.8);
             border-radius: 5px;
-            transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+            transition: background-color 0.3s;
             display: flex; /* Используем flex для центрирования текста внутри кнопки */
             align-items: center; /* Вертикальное центрирование */
             justify-content: center; /* Горизонтальное центрирование */
             margin: 10px 0;
         }
 
+        /* Стиль для кнопки "Написать в WhatsApp" */
+        .whatsapp-button {
+            background-color: var(--whatsapp-green); /* Зеленый цвет */
+            border: 2px solid var(--whatsapp-green);
+        }
+
+        .whatsapp-button:hover {
+            background-color: #ffffff; /* Белый фон при наведении */
+            color: var(--whatsapp-green); 
+        }
+
+        /* Стиль для кнопки "Перейти в VK" */
+        .vk-button {
+            background-color: var(--vk-blue); /* Синий цвет */
+            border: 2px solid var(--vk-blue);
+        }
+
+        .vk-button:hover {
+            background-color: #ffffff; /* Белый фон при наведении */
+            color: var(--vk-blue);
+        }
+
         /* Стиль для кнопки "Оставить отзыв на Яндекс Картах" */
         .review-button {
-            color: var(--button-white); /* Белый цвет текста */
-            background-color: var(--button-red); /* Красный фон кнопки */
-            border: 2px solid var(--button-red); /* Красная обводка */
+            color: var(--yandex-red); /* Красный цвет текста */
+            background-color: var(--yandex-white); /* Белый фон */
+            border: 2px solid var(--yandex-red); /* Красная обводка */
         }
 
         .review-button:hover {
-            background-color: var(--button-white); /* Белый фон при наведении */
-            color: var(--button-red); /* Красный текст при наведении */
-            border: 2px solid var(--button-red); /* Красная обводка при наведении */
+            background-color: var(--yandex-black); /* Черный фон при наведении */
+            color: var(--yandex-white); /* Белый текст при наведении */
         }
 
         .container {
@@ -110,8 +134,8 @@
 
     <div class="container">
         <a href="https://tcvetochniydom.ru" target="_blank">Перейти на сайт</a>
-        <a href="https://vk.com/tcvetochniydom" target="_blank">Перейти в VK</a>
-        <a href="https://wa.me/message/QZTI2SG7KM32D1" target="_blank">Написать в WhatsApp</a>
+        <a href="https://vk.com/tcvetochniydom" target="_blank" class="vk-button">Перейти в VK</a>
+        <a href="https://wa.me/message/QZTI2SG7KM32D1" target="_blank" class="whatsapp-button">Написать в WhatsApp</a>
         <a href="https://yandex.ru/maps/-/CCUwv6hkKA" target="_blank" class="review-button">Оставить отзыв на Яндекс Картах</a>
     </div>
 
