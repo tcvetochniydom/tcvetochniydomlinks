@@ -13,6 +13,8 @@
             --top-margin-mobile: 240px; /* Отступ сверху для мобильных */
             --top-margin-desktop: 650px; /* Отступ сверху для десктопов */
             --yandex-orange: #FF3D00; /* Оранжевый цвет Яндекса */
+            --whatsapp-green: #25D366; /* Зеленый цвет WhatsApp */
+            --vk-blue: #4B88E5; /* Синий цвет VK */
             --yandex-white: #FFFFFF; /* Белый цвет */
         }
 
@@ -69,7 +71,7 @@
             color: rgb(122, 21, 125);
             margin-bottom: 18px;
         }
-        
+
         a {
             text-decoration: none;
             color: #ffffff; /* Исходный цвет текста для других кнопок */
@@ -82,16 +84,33 @@
             margin: 10px 0;
         }
 
-        a:hover {
-            background-color: rgba(122, 21, 125, 1);
+        /* Стиль для кнопки "Написать в WhatsApp" */
+        .whatsapp-button {
+            background-color: var(--whatsapp-green); /* Зеленый цвет */
+            border: 2px solid var(--whatsapp-green);
         }
 
-        /* Новый класс для кнопки с оформлением в стиле Яндекса */
+        .whatsapp-button:hover {
+            background-color: #ffffff; /* Белый фон при наведении */
+            color: var(--whatsapp-green); 
+        }
+
+        /* Стиль для кнопки "Перейти в VK" */
+        .vk-button {
+            background-color: var(--vk-blue); /* Синий цвет */
+            border: 2px solid var(--vk-blue);
+        }
+
+        .vk-button:hover {
+            background-color: #ffffff; /* Белый фон при наведении */
+            color: var(--vk-blue);
+        }
+
+        /* Стиль для кнопки "Оставить отзыв на Яндекс Картах" */
         .review-button {
             color: var(--yandex-orange); /* Цвет текста */
             background-color: var(--yandex-white); /* Цвет фона */
             border: 2px solid var(--yandex-orange); /* Оранжевая обводка */
-            font-family: Arial, sans-serif; /* Шрифт */
         }
 
         .review-button:hover {
@@ -114,8 +133,8 @@
 
     <div class="container">
         <a href="https://tcvetochniydom.ru" target="_blank">Перейти на сайт</a>
-        <a href="https://vk.com/tcvetochniydom" target="_blank">Перейти в VK</a>
-        <a href="https://wa.me/message/QZTI2SG7KM32D1" target="_blank">Написать в WhatsApp</a>
+        <a href="https://vk.com/tcvetochniydom" target="_blank" class="vk-button">Перейти в VK</a>
+        <a href="https://wa.me/message/QZTI2SG7KM32D1" target="_blank" class="whatsapp-button">Написать в WhatsApp</a>
         <a href="https://yandex.ru/maps/-/CCUwv6hkKA" target="_blank" class="review-button">Оставить отзыв на Яндекс Картах</a>
     </div>
 
