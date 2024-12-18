@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Цветочный дом</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center; 
+            justify-content: flex-start; 
+            height: 103vh;
+            margin: 0;
+            color: white; 
+            background-size: cover; /* Обеспечивает покрытие фона */
+            background-position: center; /* Центрирует фон */
+        }
+        
+        /* Фон для мобильной версии */
+        @media (max-width: 768px) {
+            body {
+                background-image: url('fon_site_(final_mob).jpg');
+            }
+        }
+
+        /* Фон для десктопной версии */
+        @media (min-width: 769px) {
+            body {
+                background-image: url('fon_site_(final_desk).jpg');
+            }
+        }
+
+        h1 {
+            color: rgb(122, 21, 125); 
+            margin-bottom: 18px;
+        }
+        a {
+            text-decoration: none;
+            color: #ffffff;
+            background-color: rgba(122, 21, 125, 0.8); 
+            padding: 12px 24px;
+            border-radius: 5px;
+            font-size: 18px;
+            transition: background-color 0.3s;
+            display: block; 
+            margin: 10px 0; 
+        }
+        a:hover {
+            background-color: rgba(122, 21, 125, 1); 
+        }
+        .container {
+            text-align: center;
+            margin-top: 540px; 
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <a href="https://tcvetochniydom.ru" target="_blank">Перейти на сайт</a>
+        <a href="https://tcvetochniydom.ru/contacts" target="_blank">Контакты</a>
+        <a href="https://wa.me/message/QZTI2SG7KM32D1" target="_blank">Написать в WhatsApp</a>
+        <a href="https://yandex.ru/maps/-/CCUwv6hkKA" target="_blank">Оставить отзыв на Яндекс Картах</a>
+    </div>
+
+</body>
+</html>
