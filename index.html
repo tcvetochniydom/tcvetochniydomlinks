@@ -6,8 +6,10 @@
     <title>Ссылки</title>
     <style>
         :root {
+            --button-width-mobile: 90%; /* Ширина кнопок для мобильных */
+            --button-width-desktop: 300px; /* Ширина кнопок для десктопов */
             --button-height-mobile: 60px; /* Высота кнопок для мобильных */
-            --button-height-desktop: 60px; /* Высота кнопок для десктопов */
+            --button-height-desktop: 55px; /* Высота кнопок для десктопов */
             --top-margin-mobile: 240px; /* Отступ сверху для мобильных */
             --top-margin-desktop: 650px; /* Отступ сверху для десктопов */
         }
@@ -18,7 +20,7 @@
             flex-direction: column;
             align-items: center;
             justify-content: flex-start; /* Выравнивание по верхнему краю */
-            height: 105vh;
+            height: 100vh;
             margin: 0;
             color: white;
             background-size: cover;
@@ -34,7 +36,9 @@
 
             a {
                 height: var(--button-height-mobile); /* Используем переменную для высоты кнопок на мобильных */
+                width: var(--button-width-mobile); /* Используем переменную для ширины кнопок на мобильных */
                 font-size: 16px; /* Размер шрифта для мобильных устройств */
+                font-weight: bold; /* Жирный текст */
             }
 
             .container {
@@ -49,7 +53,9 @@
 
             a {
                 height: var(--button-height-desktop); /* Используем переменную для высоты кнопок для десктопов */
+                width: var(--button-width-desktop); /* Используем переменную для ширины кнопок для десктопов */
                 font-size: 18px; /* Размер шрифта для десктопов */
+                font-weight: bold; /* Жирный текст */
             }
 
             .container {
@@ -72,8 +78,6 @@
             align-items: center; /* Вертикальное центрирование */
             justify-content: center; /* Горизонтальное центрирование */
             margin: 10px 0;
-            max-width: 500px;
-            width: 100%; /* Делаем кнопки адаптивными */
         }
 
         a:hover {
