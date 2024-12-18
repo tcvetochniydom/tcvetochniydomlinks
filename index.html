@@ -6,17 +6,17 @@
     <title>Ссылки</title>
     <style>
         :root {
-            --button-width-mobile: 105%; 
-            --button-width-desktop: 330px; 
-            --button-height-mobile: 55px; 
-            --button-height-desktop: 50px; 
-            --top-margin-mobile: 240px; 
-            --top-margin-desktop: 650px; 
-            --yandex-red: #FF3D00; 
-            --yandex-white: #FFFFFF; 
-            --yandex-black: #000000; 
-            --whatsapp-green: #25D366; 
-            --vk-blue: #4B88E5; 
+            --button-width-mobile: 105%;
+            --button-width-desktop: 330px;
+            --button-height-mobile: 55px;
+            --button-height-desktop: 50px;
+            --top-margin-mobile: 240px;
+            --top-margin-desktop: 650px;
+            --yandex-red: #FF3D00;
+            --yandex-white: #FFFFFF;
+            --yandex-black: #000000;
+            --whatsapp-green: #25D366;
+            --vk-blue: #4B88E5;
         }
 
         body {
@@ -79,6 +79,8 @@
             align-items: center; 
             justify-content: center; 
             margin: 10px 0;
+            border-radius: 5px; /* Закругленные края для всех кнопок */
+            transition: background-color 0.3s, color 0.3s; /* Плавный переход */
         }
 
         /* Стиль для кнопки "Перейти" */
@@ -86,8 +88,6 @@
             color: #ffffff; /* Цвет текста */
             background-color: #87158e; /* Цвет фона */
             border: 2px solid #87158e; /* Обводка */
-            border-radius: 5px; /* Закругленные края */
-            transition: background-color 0.3s, color 0.3s; /* Плавный переход при наведении */
             height: var(--button-height-mobile); /* Высота кнопки на мобильных */
             width: var(--button-width-mobile); /* Ширина кнопки на мобильных */
         }
@@ -101,6 +101,8 @@
         .whatsapp-button {
             background-color: var(--whatsapp-green); 
             border: 2px solid var(--whatsapp-green);
+            height: var(--button-height-mobile); /* Высота кнопки на мобильных */
+            width: var(--button-width-mobile); /* Ширина кнопки на мобильных */
         }
 
         .whatsapp-button:hover {
@@ -112,6 +114,8 @@
         .vk-button {
             background-color: var(--vk-blue);
             border: 2px solid var(--vk-blue);
+            height: var(--button-height-mobile); /* Высота кнопки на мобильных */
+            width: var(--button-width-mobile); /* Ширина кнопки на мобильных */
         }
 
         .vk-button:hover {
@@ -124,6 +128,8 @@
             color: var(--yandex-white); 
             background-color: var(--yandex-red); 
             border: 2px solid var(--yandex-red); 
+            height: var(--button-height-mobile); /* Высота кнопки на мобильных */
+            width: var(--button-width-mobile); /* Ширина кнопки на мобильных */
         }
 
         .review-button:hover {
