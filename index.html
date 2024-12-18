@@ -7,21 +7,16 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         :root {
-            --button-width-mobile: 105%;
-            --button-width-desktop: 330px;
-            --button-height-mobile: 55px;
-            --button-height-desktop: 50px;
-            --top-margin-mobile: 240px;
-            --top-margin-desktop: 650px;
-            --yandex-red: #FF0000;
-            --yandex-white: #FFFFFF;
-            --yandex-black: #000000;
-            --whatsapp-green: #25D366;
+            --button-width: 250px; /* Ширина кнопок */
+            --button-height: 50px; /* Высота кнопок */
+            --yandex-red: #FF3D00; 
+            --yandex-white: #FFFFFF; 
+            --whatsapp-green: #25D366; 
             --vk-blue: #4B88E5;
-            --dark-bg: #121212;
-            --light-bg: #f0f0f0;
-            --light-text: #000;
-            --dark-text: #fff;
+            --light-bg: #f0f0f0; /* Светлый фон */
+            --dark-bg: #121212; /* Темный фон */
+            --light-text: #000; /* Светлый текст */
+            --dark-text: #fff; /* Темный текст */
         }
 
         body {
@@ -32,34 +27,10 @@
             justify-content: center; 
             height: 100vh;
             margin: 0;
-            color: white;
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            overflow: hidden; 
+            color: var(--dark-text);
+            background-color: var(--light-bg); /* Начальный светлый фон */
             transition: background-color 0.3s, color 0.3s; /* Плавный переход */
-            background: linear-gradient(135deg, rgba(135, 21, 142, 0.7), rgba(0, 0, 0, 0.5)); /* Градиентный фон */
-        }
-
-        @media (max-width: 768px) {
-            body {
-                background-image: url('fon_site_(final_mob).jpeg'); 
-            }
-
-            .container {
-                margin-top: var(--top-margin-mobile);
-            }
-        }
-
-        @media (min-width: 769px) {
-            body {
-                background-image: url('fon_site_(final_desk).jpeg'); 
-            }
-
-            .container {
-                margin-top: var(--top-margin-desktop);
-            }
+            overflow: hidden; /* Отключаем прокрутку */
         }
 
         h1 {
@@ -67,84 +38,64 @@
             margin-bottom: 18px;
         }
 
+        .container {
+            text-align: center;
+        }
+
         a {
             text-decoration: none;
-            display: flex; 
-            align-items: center; 
-            justify-content: center; 
-            margin: 10px 0;
+            display: block; /* Изменили на block для корректного размера */
+            margin: 10px auto; /* Центрирование кнопок */
             border-radius: 5px;
-            transition: background-color 0.3s, color 0.3s, transform 0.3s, box-shadow 0.3s; /* Плавный переход */
-            opacity: 0.8; 
-            position: relative; /* Для подсказок */
             padding: 10px; /* Паддинг для кнопок */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Тень для кнопок */
+            width: var(--button-width); /* Фиксированная ширина кнопок */
+            height: var(--button-height); /* Фиксированная высота кнопок */
+            text-align: center; /* Выравнивание текста по центру */
+            color: #ffffff; /* Цвет текста по умолчанию */
+            transition: background-color 0.3s, color 0.3s, transform 0.3s; /* Плавный переход */
+            opacity: 0.8; 
         }
 
         /* Кнопка "Перейти на сайт" */
         .primary-button {
-            color: #ffffff; 
             background-color: rgba(135, 21, 142, 0.8); 
-            border: 2px solid rgba(135, 21, 142, 0.8); 
-            height: var(--button-height-mobile); 
-            width: var(--button-width-mobile); 
         }
 
         .primary-button:hover {
             background-color: #ffffff; 
-            color: #87158e; 
-            transform: scale(1.05); /* Увеличение при наведении */
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Увеличение тени */
+            color: rgba(135, 21, 142, 0.8); 
+            transform: scale(1.05); 
         }
 
         /* Другие кнопки */
         .whatsapp-button {
-            color: #ffffff; 
-            background-color: rgba(37, 211, 102, 0.8); 
-            border: 2px solid rgba(37, 211, 102, 0.8); 
-            height: var(--button-height-mobile); 
-            width: var(--button-width-mobile); 
+            background-color: var(--whatsapp-green); 
         }
 
         .whatsapp-button:hover {
             background-color: #ffffff; 
             color: var(--whatsapp-green); 
             transform: scale(1.05);
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
         }
 
         .vk-button {
-            color: #ffffff; 
-            background-color: rgba(75, 136, 229, 0.8); 
-            border: 2px solid rgba(75, 136, 229, 0.8); 
-            height: var(--button-height-mobile); 
-            width: var(--button-width-mobile); 
+            background-color: var(--vk-blue); 
         }
 
         .vk-button:hover {
             background-color: #ffffff; 
             color: var(--vk-blue);
             transform: scale(1.05);
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
         }
 
         .review-button {
-            color: var(--yandex-white); 
-            background-color: rgba(255, 0, 0, 0.8); 
-            border: 2px solid rgba(255, 0, 0, 0.8); 
-            height: var(--button-height-mobile); 
-            width: var(--button-width-mobile); 
+            background-color: var(--yandex-red); 
         }
 
         .review-button:hover {
             background-color: var(--yandex-white); 
-            color: var(--yandex-red); 
+            color: var(--yandex-red);
             transform: scale(1.05);
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-        }
-
-        .container {
-            text-align: center;
         }
 
         #theme-toggle {
@@ -157,27 +108,11 @@
             border: none; 
             border-radius: 5px; 
             font-size: 16px; 
+            transition: background-color 0.3s;
         }
-
-        .tooltip {
-            visibility: hidden;
-            background-color: black;
-            color: #fff;
-            text-align: center;
-            border-radius: 5px;
-            padding: 5px;
-            position: absolute;
-            z-index: 1;
-            bottom: 125%; /* Положение подсказки сверху */
-            left: 50%;
-            margin-left: -60px; /* Сдвигаем влево */
-            opacity: 0;
-            transition: opacity 0.3s;
-        }
-
-        a:hover .tooltip {
-            visibility: visible;
-            opacity: 1; /* Показать подсказку при наведении */
+        
+        #theme-toggle:hover {
+            background: rgba(200, 200, 200, 0.7);
         }
 
     </style>
@@ -186,18 +121,10 @@
 
     <button id="theme-toggle">Сменить тему</button>
     <div class="container">
-        <a href="https://tcvetochniydom.ru" target="_blank" class="primary-button">Перейти на сайт
-            <span class="tooltip">Перейти на сайт</span>
-        </a>
-        <a href="https://vk.com/tcvetochniydom" target="_blank" class="vk-button">Перейти в VK
-            <span class="tooltip">Перейти в VK</span>
-        </a>
-        <a href="https://wa.me/message/QZTI2SG7KM32D1" target="_blank" class="whatsapp-button">Написать в WhatsApp
-            <span class="tooltip">Написать в WhatsApp</span>
-        </a>
-        <a href="https://yandex.ru/maps/-/CCUwv6hkKA" target="_blank" class="review-button">Оставить отзыв на Яндекс Картах
-            <span class="tooltip">Оставить отзыв на Яндекс Картах</span>
-        </a>
+        <a href="https://tcvetochniydom.ru" target="_blank" class="primary-button">Перейти на сайт</a>
+        <a href="https://vk.com/tcvetochniydom" target="_blank" class="vk-button">Перейти в VK</a>
+        <a href="https://wa.me/message/QZTI2SG7KM32D1" target="_blank" class="whatsapp-button">Написать в WhatsApp</a>
+        <a href="https://yandex.ru/maps/-/CCUwv6hkKA" target="_blank" class="review-button">Оставить отзыв на Яндекс Картах</a>
     </div>
 
     <script>
@@ -205,12 +132,12 @@
         const themeToggle = document.getElementById('theme-toggle');
         themeToggle.addEventListener('click', () => {
             const currentBg = getComputedStyle(document.body).backgroundColor;
-            if (currentBg === 'rgb(18, 18, 18)') { // Темная тема
-                document.body.style.backgroundColor = '#f0f0f0'; // Светлая тема
-                document.body.style.color = '#000';
+            if (currentBg === 'rgb(255, 255, 255)') { // Проверка на светлый фон
+                document.body.style.backgroundColor = 'var(--dark-bg)'; // Темный фон
+                document.body.style.color = var(--light-text); // Светлый текст
             } else {
-                document.body.style.backgroundColor = '#121212'; // Темная тема
-                document.body.style.color = '#fff';
+                document.body.style.backgroundColor = 'var(--light-bg)'; // Светлый фон
+                document.body.style.color = var(--dark-text); // Темный текст
             }
         });
     </script>
