@@ -12,6 +12,8 @@
             --button-height-desktop: 50px; /* Высота кнопок для десктопов */
             --top-margin-mobile: 240px; /* Отступ сверху для мобильных */
             --top-margin-desktop: 650px; /* Отступ сверху для десктопов */
+            --yandex-orange: #FF3D00; /* Оранжевый цвет Яндекса */
+            --yandex-white: #FFFFFF; /* Белый цвет */
         }
 
         body {
@@ -70,7 +72,7 @@
         
         a {
             text-decoration: none;
-            color: #ffffff;
+            color: #ffffff; /* Исходный цвет текста для других кнопок */
             background-color: rgba(122, 21, 125, 0.8);
             border-radius: 5px;
             transition: background-color 0.3s;
@@ -84,10 +86,17 @@
             background-color: rgba(122, 21, 125, 1);
         }
 
-        /* Новый класс для кнопки с красной обводкой */
+        /* Новый класс для кнопки с оформлением в стиле Яндекса */
         .review-button {
-            border: 2px solid red; /* Красная обводка */
-            background-color: rgba(122, 21, 125, 0.8); /* Дополнительный фон, если нужно */
+            color: var(--yandex-orange); /* Цвет текста */
+            background-color: var(--yandex-white); /* Цвет фона */
+            border: 2px solid var(--yandex-orange); /* Оранжевая обводка */
+            font-family: Arial, sans-serif; /* Шрифт */
+        }
+
+        .review-button:hover {
+            background-color: var(--yandex-orange); /* Изменение цвета фона при наведении */
+            color: var(--yandex-white); /* Изменение цвета текста при наведении */
         }
 
         .container {
