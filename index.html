@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ссылки</title>
     <style>
+        :root {
+            --button-height-mobile: 60px; /* Высота кнопок для мобильных */
+            --button-height-desktop: 80px; /* Высота кнопок для десктопов */
+        }
+
         body {
             font-family: 'Arial', sans-serif;
             display: flex;
@@ -26,7 +31,7 @@
             }
 
             a {
-                height: 60px; /* Соразмерная высота кнопок для мобильных устройств */
+                height: var(--button-height-mobile); /* Используем переменную для высоты кнопок на мобильных */
                 font-size: 16px; /* Размер шрифта для мобильных устройств */
             }
         }
@@ -37,7 +42,7 @@
             }
 
             a {
-                height: 80px; /* Соразмерная высота кнопок для десктопов */
+                height: var(--button-height-desktop); /* Используем переменную для высоты кнопок для десктопов */
                 font-size: 18px; /* Размер шрифта для десктопов */
             }
         }
