@@ -12,7 +12,7 @@
             --button-height-desktop: 50px;
             --top-margin-mobile: 240px;
             --top-margin-desktop: 650px;
-            --yandex-red: #FF3D00;
+            --yandex-red: #FF0000;
             --yandex-white: #FFFFFF;
             --yandex-black: #000000;
             --whatsapp-green: #25D366;
@@ -24,7 +24,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: flex-start; 
+            justify-content: flex-start;
             height: 100vh;
             margin: 0;
             color: white;
@@ -75,48 +75,61 @@
 
         a {
             text-decoration: none;
-            color: #ffffff; 
-            background-color: rgba(122, 21, 125, 0.8);
-            border-radius: 5px;
-            transition: background-color 0.3s;
             display: flex;
             align-items: center;
             justify-content: center;
             margin: 10px 0;
+            border-radius: 5px; /* Закругленные края для всех кнопок */
+            transition: background-color 0.3s, color 0.3s; /* Плавный переход */
+            opacity: 0.8; /* Прозрачность кнопок */
+        }
+
+        /* Стиль для кнопки "Перейти на сайт" */
+        .primary-button {
+            color: #ffffff; /* Цвет текста */
+            background-color: rgba(135, 21, 142, 0.8); /* Цвет фона с 80% непрозрачностью */
+            border: 2px solid rgba(135, 21, 142, 0.8); /* Обводка */
+        }
+
+        .primary-button:hover {
+            background-color: #ffffff; /* Белый фон при наведении */
+            color: rgba(135, 21, 142, 0.8); /* Цвет текста при наведении */
         }
 
         /* Стиль для кнопки "Написать в WhatsApp" */
         .whatsapp-button {
-            background-color: var(--whatsapp-green);
-            border: 2px solid var(--whatsapp-green);
+            color: #ffffff; /* Цвет текста */
+            background-color: rgba(37, 211, 102, 0.8); /* Цвет фона с 80% непрозрачностью */
+            border: 2px solid rgba(37, 211, 102, 0.8); /* Обводка */
         }
 
         .whatsapp-button:hover {
-            background-color: #ffffff;
-            color: var(--whatsapp-green); 
+            background-color: #ffffff; /* Белый фон при наведении */
+            color: rgba(37, 211, 102, 0.8); /* Цвет текста при наведении */
         }
 
         /* Стиль для кнопки "Перейти в VK" */
         .vk-button {
-            background-color: var(--vk-blue);
-            border: 2px solid var(--vk-blue);
+            color: #ffffff; /* Цвет текста */
+            background-color: rgba(75, 136, 229, 0.8); /* Цвет фона с 80% непрозрачностью */
+            border: 2px solid rgba(75, 136, 229, 0.8); /* Обводка */
         }
 
         .vk-button:hover {
-            background-color: #ffffff;
-            color: var(--vk-blue);
+            background-color: #ffffff; /* Белый фон при наведении */
+            color: rgba(75, 136, 229, 0.8); /* Цвет текста при наведении */
         }
 
         /* Стиль для кнопки "Оставить отзыв на Яндекс Картах" */
         .review-button {
             color: var(--yandex-white); /* Белый цвет текста */
-            background-color: var(--yandex-red); /* Красный фон */
-            border: 2px solid var(--yandex-red); /* Красная обводка */
+            background-color: rgba(255, 0, 0, 0.8); /* Цвет фона с 80% непрозрачностью */
+            border: 2px solid rgba(255, 0, 0, 0.8); /* Обводка */
         }
 
         .review-button:hover {
             background-color: var(--yandex-white); /* Белый фон при наведении */
-            color: var(--yandex-red); /* Красный текст при наведении */
+            color: rgba(255, 0, 0, 0.8); /* Красный цвет текста при наведении */
         }
 
         .container {
@@ -124,15 +137,15 @@
         }
 
         .header {
-            font-size: 24px; 
-            margin-bottom: 20px; 
+            font-size: 24px; /* Размер текста заголовка */
+            margin-bottom: 20px; /* Отступ от других элементов */
         }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <a href="https://tcvetochniydom.ru" target="_blank">Перейти на сайт</a>
+        <a href="https://tcvetochniydom.ru" target="_blank" class="primary-button">Перейти на сайт</a>
         <a href="https://vk.com/tcvetochniydom" target="_blank" class="vk-button">Перейти в VK</a>
         <a href="https://wa.me/message/QZTI2SG7KM32D1" target="_blank" class="whatsapp-button">Написать в WhatsApp</a>
         <a href="https://yandex.ru/maps/-/CCUwv6hkKA" target="_blank" class="review-button">Оставить отзыв на Яндекс Картах</a>
