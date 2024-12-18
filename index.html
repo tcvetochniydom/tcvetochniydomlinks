@@ -4,19 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ссылки</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         :root {
-            --button-width: 250px; /* Ширина кнопок */
-            --button-height: 50px; /* Высота кнопок */
-            --yandex-red: #FF3D00; 
-            --yandex-white: #FFFFFF; 
-            --whatsapp-green: #25D366; 
+            --button-width-mobile: 105%;
+            --button-width-desktop: 330px;
+            --button-height-mobile: 55px;
+            --button-height-desktop: 50px;
+            --top-margin-mobile: 240px;
+            --top-margin-desktop: 650px;
+            --yandex-red: #FF3D00;
+            --yandex-white: #FFFFFF;
+            --yandex-black: #000000;
+            --whatsapp-green: #25D366;
             --vk-blue: #4B88E5;
-            --light-bg: #f0f0f0; /* Светлый фон */
-            --dark-bg: #121212; /* Темный фон */
-            --light-text: #000; /* Светлый текст */
-            --dark-text: #fff; /* Темный текст */
         }
 
         body {
@@ -24,13 +24,48 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center; 
+            justify-content: flex-start; 
             height: 100vh;
             margin: 0;
-            color: var(--dark-text);
-            background-color: var(--light-bg); /* Начальный светлый фон */
-            transition: background-color 0.3s, color 0.3s; /* Плавный переход */
-            overflow: hidden; /* Отключаем прокрутку */
+            color: white;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                background-image: url('fon_site_(final_mob).jpeg');
+            }
+
+            a {
+                height: var(--button-height-mobile);
+                width: var(--button-width-mobile);
+                font-size: 18px;
+                font-weight: bold;
+            }
+
+            .container {
+                margin-top: var(--top-margin-mobile);
+            }
+        }
+
+        @media (min-width: 769px) {
+            body {
+                background-image: url('fon_site_(final_desk).jpeg');
+            }
+
+            a {
+                height: var(--button-height-desktop);
+                width: var(--button-width-desktop);
+                font-size: 18px;
+                font-weight: bold;
+            }
+
+            .container {
+                margin-top: var(--top-margin-desktop);
+            }
         }
 
         h1 {
@@ -38,108 +73,70 @@
             margin-bottom: 18px;
         }
 
+        a {
+            text-decoration: none;
+            color: #ffffff; 
+            background-color: rgba(122, 21, 125, 0.8);
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 10px 0;
+        }
+
+        /* Стиль для кнопки "Написать в WhatsApp" */
+        .whatsapp-button {
+            background-color: var(--whatsapp-green);
+            border: 2px solid var(--whatsapp-green);
+        }
+
+        .whatsapp-button:hover {
+            background-color: #ffffff;
+            color: var(--whatsapp-green); 
+        }
+
+        /* Стиль для кнопки "Перейти в VK" */
+        .vk-button {
+            background-color: var(--vk-blue);
+            border: 2px solid var(--vk-blue);
+        }
+
+        .vk-button:hover {
+            background-color: #ffffff;
+            color: var(--vk-blue);
+        }
+
+        /* Стиль для кнопки "Оставить отзыв на Яндекс Картах" */
+        .review-button {
+            color: var(--yandex-white); /* Белый цвет текста */
+            background-color: var(--yandex-red); /* Красный фон */
+            border: 2px solid var(--yandex-red); /* Красная обводка */
+        }
+
+        .review-button:hover {
+            background-color: var(--yandex-white); /* Белый фон при наведении */
+            color: var(--yandex-red); /* Красный текст при наведении */
+        }
+
         .container {
             text-align: center;
         }
 
-        a {
-            text-decoration: none;
-            display: block; /* Изменили на block для корректного размера */
-            margin: 10px auto; /* Центрирование кнопок */
-            border-radius: 5px;
-            padding: 10px; /* Паддинг для кнопок */
-            width: var(--button-width); /* Фиксированная ширина кнопок */
-            height: var(--button-height); /* Фиксированная высота кнопок */
-            text-align: center; /* Выравнивание текста по центру */
-            color: #ffffff; /* Цвет текста по умолчанию */
-            transition: background-color 0.3s, color 0.3s, transform 0.3s; /* Плавный переход */
-            opacity: 0.8; 
+        .header {
+            font-size: 24px; 
+            margin-bottom: 20px; 
         }
-
-        /* Кнопка "Перейти на сайт" */
-        .primary-button {
-            background-color: rgba(135, 21, 142, 0.8); 
-        }
-
-        .primary-button:hover {
-            background-color: #ffffff; 
-            color: rgba(135, 21, 142, 0.8); 
-            transform: scale(1.05); 
-        }
-
-        /* Другие кнопки */
-        .whatsapp-button {
-            background-color: var(--whatsapp-green); 
-        }
-
-        .whatsapp-button:hover {
-            background-color: #ffffff; 
-            color: var(--whatsapp-green); 
-            transform: scale(1.05);
-        }
-
-        .vk-button {
-            background-color: var(--vk-blue); 
-        }
-
-        .vk-button:hover {
-            background-color: #ffffff; 
-            color: var(--vk-blue);
-            transform: scale(1.05);
-        }
-
-        .review-button {
-            background-color: var(--yandex-red); 
-        }
-
-        .review-button:hover {
-            background-color: var(--yandex-white); 
-            color: var(--yandex-red);
-            transform: scale(1.05);
-        }
-
-        #theme-toggle {
-            position: absolute; 
-            top: 20px; 
-            right: 20px; 
-            padding: 10px; 
-            cursor: pointer; 
-            background: rgba(255, 255, 255, 0.7); 
-            border: none; 
-            border-radius: 5px; 
-            font-size: 16px; 
-            transition: background-color 0.3s;
-        }
-        
-        #theme-toggle:hover {
-            background: rgba(200, 200, 200, 0.7);
-        }
-
     </style>
 </head>
 <body>
 
-    <button id="theme-toggle">Сменить тему</button>
     <div class="container">
-        <a href="https://tcvetochniydom.ru" target="_blank" class="primary-button">Перейти на сайт</a>
+        <a href="https://tcvetochniydom.ru" target="_blank">Перейти на сайт</a>
         <a href="https://vk.com/tcvetochniydom" target="_blank" class="vk-button">Перейти в VK</a>
         <a href="https://wa.me/message/QZTI2SG7KM32D1" target="_blank" class="whatsapp-button">Написать в WhatsApp</a>
         <a href="https://yandex.ru/maps/-/CCUwv6hkKA" target="_blank" class="review-button">Оставить отзыв на Яндекс Картах</a>
     </div>
 
-    <script>
-        // Переключение темы
-        const themeToggle = document.getElementById('theme-toggle');
-        themeToggle.addEventListener('click', () => {
-            const currentBg = getComputedStyle(document.body).backgroundColor;
-            if (currentBg === 'rgb(255, 255, 255)') { // Проверка на светлый фон
-                document.body.style.backgroundColor = 'var(--dark-bg)'; // Темный фон
-                document.body.style.color = var(--light-text); // Светлый текст
-            } else {
-                document.body.style.backgroundColor = 'var(--light-bg)'; // Светлый фон
-                document.body.style.color = var(--dark-text); // Темный текст
-            }
-        });
-    </script>
 </body>
 </html>
