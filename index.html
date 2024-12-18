@@ -3,32 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Цветочный дом</title>
+    <title>Ссылки</title>
     <style>
         body {
             font-family: 'Arial', sans-serif;
             display: flex;
             flex-direction: column;
-            align-items: center; 
-            justify-content: flex-start; 
-            height: 103vh;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
             margin: 0;
-            color: white; 
-            background-size: cover; /* Обеспечивает покрытие фона */
-            background-position: center; /* Центрирует фон */
+            color: white;
+            background-size: cover; 
+            background-position: center; 
         }
-        
-        /* Фон для мобильной версии */
+
         @media (max-width: 768px) {
             body {
-                background-image: url('fon_site_(final_mob).jpg');
+                background-image: url('fon_site_(final_mob).jpg'); /* Фон для мобильных устройств */
             }
         }
 
-        /* Фон для десктопной версии */
         @media (min-width: 769px) {
             body {
-                background-image: url('fon_site_(final_desk).jpg');
+                background-image: url('fon_site_(final_desk).jpg'); /* Фон для десктопов */
             }
         }
 
@@ -46,19 +44,21 @@
             transition: background-color 0.3s;
             display: block; 
             margin: 10px 0; 
+            max-width: 300px; /* Ограничиваем максимальную ширину ссылок */
+            width: 100%; /* Делаем ссылки адаптивными */
         }
         a:hover {
             background-color: rgba(122, 21, 125, 1); 
         }
         .container {
             text-align: center;
-            margin-top: 540px; 
         }
     </style>
 </head>
 <body>
 
     <div class="container">
+        <h1>Цветочный дом</h1> <!-- Заголовок -->
         <a href="https://tcvetochniydom.ru" target="_blank">Перейти на сайт</a>
         <a href="https://tcvetochniydom.ru/contacts" target="_blank">Контакты</a>
         <a href="https://wa.me/message/QZTI2SG7KM32D1" target="_blank">Написать в WhatsApp</a>
